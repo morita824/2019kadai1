@@ -75,6 +75,7 @@ public class ITEカフェ {
                 //預り金を入力
                 
             if(m-g>=0) {
+                if(m<2000){
                    System.out.println("お釣りは"+(m-g)+"円です");
                    //お釣りを表示する
                    System.out.println(cal.get(Calendar.YEAR) + "年"
@@ -87,7 +88,21 @@ public class ITEカフェ {
                    kaikeiNo++;
                    System.out.println("ありがとうございました！");
                    //正しく処理されたらループを抜ける
-                   break;   
+                   break;
+                }else
+                    System.out.println("お釣りは"+(m-g)+"円です");
+                     System.out.println("こちら次回から使える１０％OFFクーポンです。");
+                   System.out.println(cal.get(Calendar.YEAR) + "年"
+                           + cal.get(Calendar.MONTH) + "月"
+                           + cal.get(Calendar.DATE) + "日"
+                           + cal.get(Calendar.HOUR_OF_DAY) + "時"
+                           + cal.get(Calendar.MINUTE) + "分");
+                   
+                   System.out.printf("お会計番号：%06d\n", kaikeiNo);
+                   kaikeiNo++;
+                   System.out.println("ありがとうございました！");
+                   //正しく処理されたらループを抜ける
+                   break;
                }else 
                    System.out.println("お金が足りません"); 
                   
